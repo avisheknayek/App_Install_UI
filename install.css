@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100vh;
+    background: #0f0f0fec;
+    font-family: arial,sans-serif;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Circle */
+.circle {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 30%;
+}
+
+/* Background Circle*/
+.bg {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 0;
+}
+
+/* Progress Circle*/
+.progress {
+    fill: none;
+    stroke: #105dab;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 408;
+    stroke-dashoffset: 408;
+    transition: stroke-dashoffset 0.1s ease-in;
+}
+
+/* Center Icon */
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon svg {
+    width: 60px;
+    height: 60px;
+}
+
+/* App info */
+.app-name {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.app-name h2 {
+    font-size: 22px;
+}
+
+.app-name h4 {
+    font-size: 14px;
+    color: #a5b4fc;
+}
+
+.app-name p {
+    font-size: 12px;
+    color: #777;
+}
+
+.percent {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #00e676;
+}
+
+/* Buttons */
+.btns {
+    display: flex;
+    gap: 15px;
+
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* Install */
+.install {
+    width: 420px;
+    height: 55px;
+    font-weight: bold;
+    background: #a5b4fc;
+    color: #000;
+}
+
+.install:hover {
+    background: #6366f1;
+}
+
+/* Uninstall */
+.uninstall {
+    display: none;
+    width: 250px;
+    height: 55px;
+    background: transparent;
+    border: 2px solid #a5b4fc;
+    color: #a5b4fc;
+}
+
+.uninstall:hover {
+    background: #a5b4fc;
+    color: #000;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .circle {
+        width: 120px;
+        height: 120px;
+    }
+
+}
